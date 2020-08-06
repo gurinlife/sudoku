@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+    text-align: center;
+    font-weight: bold !important;
+    padding: 0 !important;
+}
+
+table {
+    tr {
+        td:first-child {
+            border-left: 3px solid;
+        }
+
+        td:nth-child(3n+3) {
+            border-right: 3px solid;
+        }
+
+        td {
+            padding: 0 !important;
+        }
+    }
+
+    tr:first-child {
+        td {
+            border-top: 3px solid;
+        }
+    }
+
+    tr:nth-child(3n+3) {
+        td {
+            border-bottom: 3px solid;
+        }
+    }
+}
