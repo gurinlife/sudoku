@@ -79,7 +79,7 @@
                 inputNumber.push(`<tr>`);
 
                 for (let j = 0; j < 9; j++) {
-                    inputNumber.push(`<td><input type="tel" class="form-control" value="${(arrData[i][j] != '.') ? arrData[i][j] : ''}"></td>`);
+                    inputNumber.push(`<td><input type="tel" class="form-control" value="${(arrData[i][j] != '.') ? arrData[i][j] : ''}" ${(arrData[i][j] != '.') ? 'disabled' : ''}></td>`);
                 }
 
                 inputNumber.push(`</tr>`);
