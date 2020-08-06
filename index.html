@@ -20,14 +20,14 @@
             <div class="col-lg-8 offset-lg-2">
                 <div class="text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="?diff=easy" class="btn btn-outline-secondary btn-sm">Easy</a></li>
-                        <li class="list-inline-item"><a href="?diff=medium" class="btn btn-outline-secondary btn-sm">Medium</a></li>
-                        <li class="list-inline-item"><a href="?diff=hard" class="btn btn-outline-secondary btn-sm">Hard</a></li>
+                        <li class="list-inline-item"><a href="?diff=easy" class="btn btn-outline-secondary btn-sm diff easy">Easy</a></li>
+                        <li class="list-inline-item"><a href="?diff=medium" class="btn btn-outline-secondary btn-sm diff medium">Medium</a></li>
+                        <li class="list-inline-item"><a href="?diff=hard" class="btn btn-outline-secondary btn-sm diff hard">Hard</a></li>
                     </ul>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="?diff=very-hard" class="btn btn-outline-secondary btn-sm">Very Hard</a></li>
-                        <li class="list-inline-item"><a href="?diff=insane" class="btn btn-outline-secondary btn-sm">Insane</a></li>
-                        <li class="list-inline-item"><a href="?diff=inhuman" class="btn btn-outline-secondary btn-sm">Inhuman</a></li>
+                        <li class="list-inline-item"><a href="?diff=very-hard" class="btn btn-outline-secondary btn-sm diff very-hard">Very Hard</a></li>
+                        <li class="list-inline-item"><a href="?diff=insane" class="btn btn-outline-secondary btn-sm diff insane">Insane</a></li>
+                        <li class="list-inline-item"><a href="?diff=inhuman" class="btn btn-outline-secondary btn-sm diff inhuman">Inhuman</a></li>
                     </ul>
                 </div>
                 <table id="__sudoku_table" class="table table-bordered">
@@ -87,6 +87,11 @@
 
             sudokuTable.innerHTML = inputNumber.join('');     
             $('[type="button"]').show();
+
+            $('.diff').removeClass('btn-outline-secondary');
+            $('.diff').addClass('btn-outline-secondary');
+            $('.diff.'+getParams.diff).removeClass('btn-outline-secondary');
+            $('.diff.'+getParams.diff).addClass('btn-secondary');
         }
 
         function validate_sudoku() {
